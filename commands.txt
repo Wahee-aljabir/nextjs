@@ -1,0 +1,57 @@
+# Initial Setup
+-> npm init -y
+-> npm install express body-parser bcrypt sqlite3 jsonwebtoken cors pusher
+-> npm install -D nodemon tailwindcss postcss autoprefixer concurrently
+
+# Initialize Tailwind CSS
+-> npx tailwindcss init -p
+
+# Install dependencies
+-> npm install
+
+# Option 1: Run both server and Tailwind watcher concurrently (recommended)
+-> npm run dev:all
+
+# Option 2: Run server and Tailwind separately (in different terminals)
+Terminal 1 (for server):
+-> npm run dev
+
+Terminal 2 (for Tailwind):
+-> npm run watch:css
+
+# Access the application
+-> Open http://localhost:3000 in your browser
+
+# Note: Choose either Option 1 (concurrent) or Option 2 (separate terminals)
+
+
+
+# SQLite Commands
+
+# Open SQLite CLI with a database
+-> sqlite3 chat-app.db
+
+# Create a new table
+-> CREATE TABLE users (
+     id INTEGER PRIMARY KEY AUTOINCREMENT,
+     username TEXT NOT NULL,
+     password TEXT NOT NULL
+   );
+
+# Insert data into a table
+-> INSERT INTO users (username, password) VALUES ('admin', 'password123');
+
+# Query data from a table
+-> SELECT * FROM users;
+
+# Update data in a table
+-> UPDATE users SET password = 'newpassword' WHERE username = 'admin';
+
+# Delete data from a table
+-> DELETE FROM users WHERE username = 'admin';
+
+# Drop a table
+-> DROP TABLE users;
+
+# Exit SQLite CLI
+-> .exit

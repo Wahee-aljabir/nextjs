@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat - Chat App</title>
+  <link href="output.css" rel="stylesheet">
+</head>
+<body class="bg-emerald-50 min-h-screen flex flex-col">
+  <!-- Navbar -->
+  <div class="navbar bg-white shadow-md">
+    <div class="flex-1">
+      <a class="btn btn-ghost normal-case text-xl text-emerald-700">TimetoTalk</a>
+    </div>
+    <div class="flex-none gap-2">
+      <span id="signed-in-user" class="font-bold text-emerald-700"></span>
+      <button id="logout-btn" class="btn btn-error btn-sm">Logout</button>
+    </div>
+  </div>
+  <div class="flex flex-1 overflow-hidden">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-emerald-100 p-4 flex flex-col gap-4 min-h-0">
+      <div>
+        <h2 class="text-lg font-bold mb-2 text-emerald-900">Invited Rooms for You</h2>
+        <div id="room-list" class="flex flex-col gap-2"></div>
+        <a href="create-room.html" class="btn btn-emerald-600 btn-sm mt-2 w-full text-black">+ Create Room</a>
+      </div>
+      <div class="mt-auto flex flex-col gap-2">
+        <a href="/stats.html" class="btn btn-outline btn-success w-full">📈 Stats</a>
+        <a href="/changelog.html" class="btn btn-outline btn-info w-full">📋 Changelog</a>
+      </div>
+    </aside>
+    <!-- Chat Area -->
+    <main id="chat-interface" class="flex-1 flex flex-col p-4 gap-4 min-h-0">
+      <div id="current-room" class="mb-2 relative">
+        <h2 class="text-xl text-emerald-900 flex items-center justify-between">
+          <span id="room-name" class="font-bold">Welcome to TimetoTalk!</span>
+          <span id="room-participants" class="text-xs text-gray-400"></span>
+          <div class="relative ml-2">
+            <button id="room-menu-btn" class="p-2 rounded-full hover:bg-gray-200 focus:outline-none">
+              <span style="font-size: 24px;">&#8942;</span>
+            </button>
+            <div id="room-menu" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50 hidden">
+              <button id="manage-members-btn" class="block w-full text-left px-4 py-2 hover:bg-gray-100">Manage Members</button>
+            </div>
+          </div>
+        </h2>
+        <p id="room-description" class="text-sm text-gray-500"></p>
+      </div>
+      <div id="messages" class="bg-white rounded-lg shadow p-4 flex-1 overflow-auto flex flex-col"></div>
+      <form id="message-form" class="flex gap-2">
+        <input type="text" id="message-input" class="input input-bordered flex-1" placeholder="Your message..." required>
+        <button type="submit" class="btn btn-emerald-600 text-white">Send</button>
+      </form>
+    </main>
+  </div>
+  <!-- Move the modal here, before the scripts -->
+  <div id="manage-members-modal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg shadow-lg p-8 w-full max-w-md relative">
+      <button id="close-modal" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+      <h3 class="text-xl font-bold mb-4 text-emerald-900">Add Member to Room</h3>
+      <input id="new-member-input" type="text" placeholder="Type username and press Enter" class="input input-bordered w-full mb-4" autocomplete="off" />
+      <div id="member-error" class="text-sm text-red-600 mb-2 hidden"></div>
+      <div id="current-members-list" class="mt-2"></div>
+    </div>
+  </div>
+  <script src="js/protectRoute.js"></script>
+  <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+</html>

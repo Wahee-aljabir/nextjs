@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stats - Chat App</title>
+  <link href="output.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-emerald-50 min-h-screen flex flex-col">
+  <div class="navbar bg-white shadow-md">
+    <div class="flex-1">
+      <a href="chat.html" class="btn btn-ghost normal-case text-xl text-emerald-700">TimetoTalk</a>
+    </div>
+  </div>
+  <div class="max-w-2xl mx-auto mt-10 bg-white rounded-lg shadow-lg p-8">
+    <h1 class="text-3xl font-bold text-emerald-700 mb-6 text-center">Message Stats</h1>
+    <canvas id="messagesChart" height="120"></canvas>
+    <div id="today-messages-count" class="text-center text-lg font-semibold mt-6"></div>
+    <div id="stats-error" class="text-red-500 mt-4 text-center hidden"></div>
+    <div class="mt-8 text-center">
+      <a href="chat.html" class="btn btn-outline btn-emerald-700">← Back to Chat</a>
+    </div>
+  </div>
+  <script src="js/stats.js"></script>
+</body>
+</html>

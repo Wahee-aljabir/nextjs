@@ -1,14 +1,33 @@
 {
-  "private": true,
+  "name": "pusher-chat-app",
+  "version": "1.0.0",
+  "main": "server.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./public/output.css --watch",
+    "dev:all": "concurrently \"npm run dev\" \"npm run watch:css\""
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "next": "^15.0.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  }
+    "bcrypt": "^5.1.1",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "daisyui": "^5.0.27",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "pusher": "^5.2.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17"
+  },
+  "description": ""
 }

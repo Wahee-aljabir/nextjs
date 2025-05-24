@@ -1,24 +1,40 @@
-# Node.js Hello World
+# Free and No-Cost Node.js Web Template
 
+## Overview
 
-This example shows the most basic idea behind Next. We have 2 pages: `src/pages/index.js` and `src/pages/about.js`. The former responds to `/` requests and the latter to `/about`. Using `next/link` you can add hyperlinks between them with universal routing capabilities.
+This project is a basic Node.js + HTML website created entirely from scratch and made **TOTALLY FREE** for anyone to use or deploy. It requires no paid servers and is ideal for beginners learning backend development or for small, personal web projects.
 
-The app in this repo is deployed at https://next-js.onrender.com.
+> ⚠️ Note: While this project is free to use and share, it is **not open source**. You may not redistribute or modify the code without permission.
 
-## Deploy as Node Web Service
+---
 
-Click the button below to deploy this app on Render.
+## For Developers
 
-<a href="https://render.com/deploy" referrerpolicy="no-referrer-when-downgrade" rel="nofollow">
-  <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render" />
-</a>
+### Technology Stack
 
-## Deploy as Static Site
+- **Backend**: Node.js
+- **Frontend**: HTML
+- **Database**: SQLite (lightweight and file-based)
 
-1. Modify the code:
-    1. In `render.yaml`, replace the definition of the service named `next-js` with the definition that is commented out.
-    2. In `next.config.mjs`, uncomment the line that sets `output: "export"`.
+### Features
 
-2. Commit the code changes to your repository.
+- Native Node.js HTTP server (no Express or frameworks)
+- Pure HTML templates
+- SQLite for simple database integration
+- Minimal file structure for easy navigation
+- Zero cost deployment setup
 
-3. Click the Deploy to Render button.
+---
+
+## Deployment & URLs
+
+- **Hosting Platform**: [Render](https://render.com)
+- **Short URL Services Used**:
+  - [v.gd](https://v.gd)
+  - [is.gd](https://is.gd)
+  - [GitHub](https://github.com)
+  - [tinyurl.com](https://tinyurl.com)
+
+This project is deployed without any recurring server fees, making it ideal for personal and demo projects.
+
+---

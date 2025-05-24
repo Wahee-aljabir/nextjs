@@ -6,6 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js",
     "start": "node server.js",
+    "build": "npm install",
     "watch:css": "tailwindcss -i ./src/input.css -o ./public/output.css --watch",
     "dev:all": "concurrently \"npm run dev\" \"npm run watch:css\""
   },
